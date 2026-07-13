@@ -40,18 +40,17 @@ class ProductController {
   }
 
 
- getByCategory = async (req, res) => {
-
- try {
-  const {category} = req.params;
-  const products = await this.manager.getByCategory( category );
-  res.json(products);
- }catch(err) {
-  res.status(500).json({ error: "Error al obtener productos por categoría" })
- }
-
- }
-
+getByCategory = async (req, res) => {
+  try {
+    const { category } = req.params;
+    const products = await this.manager.getByCategory(category);
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({
+      error: "Error al obtener productos por categoría"
+    });
+  }
+}
 
 
   create = async (req, res) => {
