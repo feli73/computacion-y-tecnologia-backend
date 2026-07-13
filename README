@@ -1,0 +1,136 @@
+# E-commerce API - Backend
+
+Backend desarrollado con **Node.js y Express** para la gestión de productos, órdenes de compra y control de stock de una tienda online.
+
+La API permite administrar un catálogo de productos, realizar consultas por categoría, actualizar inventario y registrar órdenes generadas desde el frontend.
+
+## 🚀 Tecnologías utilizadas
+
+* Node.js
+* Express
+* MongoDB Atlas
+* Mongoose
+* JavaScript ES Modules
+* dotenv
+* CORS
+
+## 📁 Arquitectura del proyecto
+
+```
+src/
+│
+├── controllers/
+│   ├── product-controller.js
+│   └── order-controller.js
+│
+├── managers/
+│   ├── product-manager.js
+│   └── order-manager.js
+│
+├── routes/
+│   ├── product-router.js
+│   └── order-router.js
+│
+├── schemas/
+│   ├── producto-schema.js
+│   └── order-schema.js
+│
+├── conexion.js
+└── server.js
+```
+
+## ✨ Funcionalidades
+
+### Productos
+
+* Obtener todos los productos.
+* Obtener productos por ID.
+* Filtrar productos por categoría.
+* Crear productos.
+* Insertar múltiples productos.
+* Actualizar productos.
+* Eliminar productos.
+* Descontar stock al realizar una compra.
+
+### Órdenes
+
+* Crear órdenes de compra.
+* Guardar información del cliente.
+* Registrar productos comprados.
+* Almacenar el total de la compra.
+
+## 📌 Endpoints
+
+### Productos
+
+| Método | Endpoint                        | Descripción                 |
+| ------ | ------------------------------- | --------------------------- |
+| GET    | `/productos`                    | Obtener todos los productos |
+| GET    | `/productos/:id`                | Obtener producto por ID     |
+| GET    | `/productos/category/:category` | Filtrar por categoría       |
+| POST   | `/productos`                    | Crear producto              |
+| POST   | `/productos/many`               | Crear múltiples productos   |
+| PUT    | `/productos/:id`                | Actualizar producto         |
+| DELETE | `/productos/:id`                | Eliminar producto           |
+| POST   | `/productos/:id/buy`            | Actualizar stock            |
+
+### Órdenes
+
+| Método | Endpoint   | Descripción     |
+| ------ | ---------- | --------------- |
+| POST   | `/ordenes` | Crear una orden |
+
+## ⚙️ Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone <url-del-repositorio>
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Crear un archivo `.env`:
+
+```env
+URL_MONGO_ATLAS=tu_url_de_mongodb
+FRONTEND_URL=http://localhost:5173,urldeploydelfront
+```
+
+Ejecutar el servidor:
+
+```bash
+npm run dev
+```
+
+El servidor estará disponible en:
+
+```
+http://localhost:8080
+```
+
+## 🌐 Deploy
+
+
+ Front end
+ 
+ https...
+
+ Backend
+
+https...
+
+
+Base de datos:
+MongoDB Atlas
+
+
+
+
+## 👨‍💻 Autor
+
+Proyecto desarrollado como práctica Full Stack utilizando React, Node.js, Express y MongoDB.
